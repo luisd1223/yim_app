@@ -1,16 +1,20 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { 
+  {
     path: 'main',
-    loadComponent: () => import('./main/main.page').then( m => m.MainPage )
+    loadComponent: () => import('./welcome-page/welcome-page.page').then( m => m.WelcomePage )
   },
   {
     path: 'classes-list',
     loadComponent: () => import('./classes-list/classes-list.page').then( m => m.ClassesListPage)
   },
   {
-    path: 'menu',
-    loadComponent: () => import('./menu/menu.page').then( m => m.MenuPage)
-  }
+    path: 'completed-classes',
+    loadComponent: () => import('./completed-classes/completed-classes.page').then( m => m.CompletedClassesPage)
+  },
+  {
+    path: 'achievements',
+    loadComponent: () => import('./achievements/achievements.page').then( m => m.AchievementsPage)
+  },
 ];
