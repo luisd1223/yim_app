@@ -1,3 +1,23 @@
 <ion-app>
+  <ion-content> </ion-content>
   <ion-router-outlet></ion-router-outlet>
+  <ion-footer *ngIf="showMenu">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button routerLink="/classes-list" routerDirection="root">
+          <ion-label>Clases</ion-label>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button routerLink="/completed-classes" routerDirection="root">
+          <ion-label>Completadas</ion-label>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button routerLink="/achievements" routerDirection="root">
+          <ion-label>Logros</ion-label>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>

@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   standalone: true,
-  imports: [IonApp, IonRouterOutlet],
+  imports: [IonicModule, CommonModule],
 })
+
 export class AppComponent {
-  constructor() {}
+  constructor(private router: Router) {
+
+  }
+
+  get showMenu(): boolean {
+    return this.router.url !== '/welcome-page';
+  }
 }
